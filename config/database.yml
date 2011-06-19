@@ -39,7 +39,7 @@ test:
   encoding: unicode
   database: ranksimple_test
   pool: 5
-  username: gkt
+  username: gtk
   password:
 
 production:
