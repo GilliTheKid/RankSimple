@@ -1,0 +1,13 @@
+<div id="header">
+	<% if member_signed_in? %>
+		<div style="height: 21px; padding: 12px 4px 6px 0">
+			<a>Profile   Groups</a>   <%= link_to "Sign out", destroy_member_session_path, :method => :destroy %>
+		</div>
+	<% else %>
+		<div style="height: 21px; padding: 12px 4px 6px 0">
+			<%= link_to "Sign up", new_member_registration_path %>
+		</div>
+	<% end %>	
+	<div id="headerline"></div>
+</div>
+

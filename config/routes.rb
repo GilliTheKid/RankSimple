@@ -1,8 +1,16 @@
 Ranksimple::Application.routes.draw do
   
   devise_for :members
-
-  root :to => "home#index"
+  
+  #resources :pages
+  
+  devise_scope :member do
+      get "/", :to => "devise/sessions#new"
+  end
+  
+  get "/profile", :to => 'pages#profile'
+  
+  root :to => "devise/sessions#new"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
